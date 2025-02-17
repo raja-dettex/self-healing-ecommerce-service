@@ -1,0 +1,14 @@
+syntax = "proto3";
+
+service APIGatewayService {
+  rpc RouteRequest(RouteRequestMessage) returns (RouteResponseMessage) {};
+}
+
+message RouteRequestMessage {
+  string service_name = 1;
+  string payload = 2;
+}
+
+message RouteResponseMessage {
+  string response = 1;
+}

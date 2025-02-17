@@ -1,0 +1,29 @@
+syntax = "proto3";
+
+package users;
+
+import "orders.proto";
+
+message User {
+  int32 id = 1;
+  string username = 2;
+  string email = 3;
+  repeated orders.Order orders = 4;
+}
+
+
+message UserId  {
+  int32 id = 1;
+}
+message UserList {
+  repeated User user = 1;
+}
+
+message Empty{}
+
+service UserService{
+  rpc add_user(User) returns (User);
+  rpc delete_user(UserId) returns (User);
+  rpc get_users(Empty) returns(UserList);
+
+}
