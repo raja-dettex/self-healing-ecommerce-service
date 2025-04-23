@@ -47,10 +47,7 @@ Returns a list of detected service anomalies for debugging or observability.
    ```bash
    docker-compose up --build
    ```
-2. **Run Python Application:**
-   ```bash
-   python  --build
-   ```
+   
 ## 📈 Monitoring
 
 - Prometheus is configured for basic service monitoring.
